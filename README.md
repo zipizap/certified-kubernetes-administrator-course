@@ -1,4 +1,4 @@
-# CKA improved scripts to quickly create,start/stop,destroy a 3-node kubeadm cluster (CNI: weave) with Vagrant
+# Improved scripts to quickly create,start/stop,destroy a 3-node kubeadm cluster 
 
 Created cluster will have:
 
