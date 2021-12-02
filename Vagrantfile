@@ -4,8 +4,7 @@
 # Define the number of master and worker nodes
 # If this number is changed, remember to update setup-hosts.sh script with the new hosts IP details in /etc/hosts of each VM.
 NUM_MASTER_NODE = 1
-#NUM_WORKER_NODE = 2
-NUM_WORKER_NODE = 1
+NUM_WORKER_NODE = 2
 
 IP_NW = "192.168.56."
 MASTER_IP_START = 1
@@ -72,8 +71,8 @@ Vagrant.configure("2") do |config|
 
         node.vm.provision "setup-dns", type: "shell", :path => "ubuntu/update-dns.sh"
         # :)
-        node.vm.provision "1.allnodes.commonconfig.sh", type: "shell", :path => "./1.allnodes.commonconfig.sh"
-        node.vm.provision "2a.master.kubeadm_init.sh", type: "shell", :path => "./2a.master.kubeadm_init.sh"
+        node.vm.provision "1.inside-allnodes.commonconfig.sh", type: "shell", :path => "./1.inside-allnodes.commonconfig.sh"
+        node.vm.provision "2a.inside-master.kubeadm_init.sh" , type: "shell", :path => "./2a.inside-master.kubeadm_init.sh"
 
       end
   end
@@ -96,7 +95,7 @@ Vagrant.configure("2") do |config|
         end
 
         node.vm.provision "setup-dns", type: "shell", :path => "ubuntu/update-dns.sh"
-        node.vm.provision "1.allnodes.commonconfig.sh", type: "shell", :path => "./1.allnodes.commonconfig.sh"
+        node.vm.provision "1.inside-allnodes.commonconfig.sh", type: "shell", :path => "./1.inside-allnodes.commonconfig.sh"
     end
   end
 end

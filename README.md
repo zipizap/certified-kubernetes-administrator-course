@@ -1,6 +1,6 @@
 # CKA notes and improved scripts to setup kubeadm cluster with Vagrant
 
-# Create cluster
+## Create cluster
 ```
 ## In HOST
 ./0.HOST.vagrant_up.sh
@@ -38,7 +38,7 @@ k get pod -A
 ```
 
 
-# ssh into kubemaster kubenode01 kubenode02
+## Ssh into kubemaster kubenode01 kubenode02
 
 The same for any of the nodes:
 
@@ -54,7 +54,7 @@ sudo su
 ```
 
 
-# Stop/Start cluster 
+## Stop/Start cluster 
 ```
 # Stop cluster (ex: before shutting down HOST)
 ./8a.HOST.vagrant_halt.sh
@@ -73,7 +73,7 @@ k get pod -A
 
 
 
-# Destroy the cluster and VMs
+## Destroy the cluster and VMs
 ```
 ./9.HOST.vagrant_destroy.sh
 ```
