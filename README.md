@@ -1,4 +1,5 @@
-# CKA notes and improved scripts to setup kubeadm cluster with Vagrant
+# CKA improved scripts to quickly create,start/stop,destroy a 3-node kubeadm cluster (CNI: weave) with Vagrant
+
 
 ## Create cluster
 ```
@@ -20,6 +21,7 @@ exit
 sudo su
 ## paste the copied command "kube join ..."
 exit 
+exit
 
 
 ## In HOST
@@ -27,13 +29,15 @@ exit
 ## Inside kubenode02
 sudo su
 ## paste the same copied command "kube join ..."
+exit 
+exit
 
 
 ## In HOST
 source 3.HOST.kubeconfig.source
 ## At this point the cluster is up-and-running, and from the HOST we can execute kubectl (alias k) on the cluster:
 k get nodes -o wide
-k get pod -A
+atk get pod -A
 #... play with the cluster...
 ```
 
