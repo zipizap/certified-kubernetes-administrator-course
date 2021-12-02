@@ -1,5 +1,12 @@
 # CKA improved scripts to quickly create,start/stop,destroy a 3-node kubeadm cluster (CNI: weave) with Vagrant
 
+## Requirements
+
+A HOST (ex: laptop running ubuntu 18.04), with 6GB RAM, 6 CPUs, 30GB-disk, with following sw already installed:
+
+- [Virtualbox](https://www.virtualbox.org)
+- [vagrant](https://www.vagrantup.com/)
+
 
 ## Create cluster
 ```
